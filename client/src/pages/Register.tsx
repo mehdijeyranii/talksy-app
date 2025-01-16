@@ -15,7 +15,7 @@ const Register = () => {
         e.preventDefault();
         try {
             const response = await fetch(
-                "http://localhost:5000/api/auth/register",
+                "http://localhost:5500/api/auth/register",
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -28,6 +28,9 @@ const Register = () => {
             console.error(`Error registering user: ${error}`);
         }
     };
+
+    console.log(formData);
+    
 
     return (
         <form onSubmit={handleSubmit}>
